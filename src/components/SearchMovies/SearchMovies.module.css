@@ -1,0 +1,25 @@
+
+
+.form {
+
+  margin-left: 25px;
+}
+.input{
+
+   width:200px;
+   height: 25px;
+   font-size: 14px;
+   border-radius: 4px;
+   margin-right: 3px;
+}
+.btnForm{
+  height: 27px;
+  border-radius: 4px;
+ cursor: pointer;
+}
+
+.btnForm:hover, .btnForm:focus{
+  color: white;
+  background-color: orangered;
+  
+}
