@@ -3,14 +3,12 @@ import css from './SearchMovies.module.css';
 
 const SearchMovies = ({ getMoviesName }) => {
   const [searchMovies, setSearchMovies] = useState('');
-
   const handelSubmit = e => {
     e.preventDefault();
     getMoviesName(searchMovies);
     setSearchMovies('');
   };
   return (
-
       <form className={css.form} onSubmit={handelSubmit}>
         <input
         className={css.input}
