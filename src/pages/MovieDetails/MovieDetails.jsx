@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Suspense } from 'react';
 import MovieItem from 'components/MovieItem/MovieItem';
 import { useEffect, useRef, useState } from 'react';
@@ -56,5 +57,9 @@ const MovieDetails = () => {
    
   );
 };
-<div></div>;
+MovieItem.propType={
+  movieInfo:PropTypes.objectOf(Array)
+}
+
+
 export default MovieDetails;

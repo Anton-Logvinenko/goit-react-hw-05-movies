@@ -11,7 +11,6 @@ async function getTrendFetch() {
     api_key: API_KEY,
   };
   const response = await axios.get(`${TREND_URL}`, { params });
-  console.log('111111', response);
   return response.data;
 }
 
@@ -20,48 +19,47 @@ async function getMovieDeteilFetch(movieId) {
     api_key: API_KEY,
   };
   const response = await axios.get(`${MOVIE_DETAILS_URL}${movieId}`, {
-    params});
+    params,
+  });
 
   return response.data;
 }
 
-
-
-async function getMovieCast(movieId){
+async function getMovieCast(movieId) {
   const params = {
     api_key: API_KEY,
   };
- const response= await axios.get(`${MOVIE_DETAILS_URL}${movieId}/credits`, {
-  params});
+  const response = await axios.get(`${MOVIE_DETAILS_URL}${movieId}/credits`, {
+    params,
+  });
 
-return response.data
+  return response.data;
 }
 
-
-async function getMoviesReviews (movieId){
+async function getMoviesReviews(movieId) {
   const params = {
     api_key: API_KEY,
   };
-const response= await axios.get(`${MOVIE_DETAILS_URL}${movieId}/reviews`, {params})
-return response.data
-
+  const response = await axios.get(`${MOVIE_DETAILS_URL}${movieId}/reviews`, {
+    params,
+  });
+  return response.data;
 }
 
-async function  getSearchFetch (moviesName){
+async function getSearchFetch(moviesName) {
   const params = {
     api_key: API_KEY,
     query: moviesName,
-    page:1,
   };
 
-const response = await axios.get(`${SEARCH_URL}`,{params})
-return response.data
-
+  const response = await axios.get(`${SEARCH_URL}`, { params });
+  return response.data;
 }
 
-
-
-
-
-
-export { getTrendFetch, getMovieDeteilFetch, getMovieCast, getMoviesReviews, getSearchFetch};
+export {
+  getTrendFetch,
+  getMovieDeteilFetch,
+  getMovieCast,
+  getMoviesReviews,
+  getSearchFetch,
+};

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import posterPlug from '../../utility/posterPlug.png';
 // Стили
@@ -16,7 +17,6 @@ const MoviesSearchList = ({ moviesData }) => {
           <Li key={id}>
             <Link to={`/movies/${id}`} state={{ from: location }}>
               <ImgBox>
-                {' '}
                 <img
                   src={!poster_path ? posterPlug : `${imgPoster}${poster_path}`}
                   alt={title}
@@ -30,6 +30,17 @@ const MoviesSearchList = ({ moviesData }) => {
       </List>
     </Conteiner>
   );
+};
+
+MoviesSearchList.propTypes = {
+  moviesData: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      poster_path: PropTypes.string,
+      release_date: PropTypes.string,
+    })
+  ),
 };
 
 export default MoviesSearchList;

@@ -1,8 +1,7 @@
 import posterPlug from '../../utility/posterPlug.png';
 
 const CastList = ({ castInfo }) => {
-  console.log('castInfo', castInfo);
-  return castInfo.length === 0 ? (
+   return castInfo.length === 0 ? (
     <h2>No cast Information</h2>
   ) : (
     <ul>

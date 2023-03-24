@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMoviesReviews } from '../../services/MoviesFetch';
@@ -25,5 +26,6 @@ const Reviews = () => {
   }
   return <ReviewsList reviewsInfo={reviewsInfo} />;
 };
+
 
 export default Reviews;

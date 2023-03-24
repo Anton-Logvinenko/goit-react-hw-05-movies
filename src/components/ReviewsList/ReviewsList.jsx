@@ -1,5 +1,4 @@
 const ReviewsList = ({ reviewsInfo }) => {
-  console.log('ReviewsList',reviewsInfo)
 
 
   return reviewsInfo.length ===0 ? (

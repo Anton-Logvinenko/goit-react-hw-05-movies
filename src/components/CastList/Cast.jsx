@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CastList from './CastLIst';
@@ -25,4 +26,9 @@ const Cast = () => {
   }
   return <CastList castInfo={castInfo} />;
 };
+
+
+
+
+
 export default Cast;

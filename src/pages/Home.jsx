@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import {getTrendFetch} from '../services/MoviesFetch';
 import MoviesTrendList from '../components/MoviesList/MoviesTrendList';
@@ -9,7 +10,7 @@ const Home = () => {
     async function getTrendMovies() {
       try {
         const trendMov = await getTrendFetch();
-        console.log('222', trendMov.results);
+     
         setTrendMovies(trendMov.results);
       } catch (error) {
         console.log(error);
@@ -19,5 +20,11 @@ const Home = () => {
 
   return <MoviesTrendList trendMovies={trendMovies} />;
 };
+
+MoviesTrendList.propTypes={
+  trendMovies:PropTypes.array
+}
+
+
 
 export default Home;
